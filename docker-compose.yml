@@ -2,7 +2,7 @@
 version: '3.1'
 services:
   backend:
-    image: registry.github.com/vipindasvg/cryptoserver/backend:dev
+    image: registry.github.com/vipindasvg/cryptoserver:dev
     ports:
       - "8081:8081"
     restart: always  

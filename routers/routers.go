@@ -19,8 +19,7 @@ func InitRoutes() *echo.Echo {
 	if l, ok := e.Logger.(*log.Logger); ok {
 		l.SetHeader("${time_rfc3339} ${level}")
 	}
-	// liveness probe for k8s
-	e.GET(versionpref+"cryptoprice/currency/:symbol", controllers.GetCryptoPrice)
-	e.GET(versionpref+"cryptoprice/currency/all", controllers.GetCryptoPrices)
+	e.GET(versionpref+"/cryptoprice/currency/:symbol", controllers.GetCryptoPrice)
+	e.GET(versionpref+"/cryptoprice/currency/all", controllers.GetCryptoPrices)
 	return e
 }	
