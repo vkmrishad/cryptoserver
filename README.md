@@ -9,6 +9,6 @@ The project deployed in vultr server with ip 45.63.127.197
 
 Please find api end points:-
 
-http://45.63.127.197:8081/api/v1/currency/FTMUSD (can any symbols)
+http://45.63.127.197:8081/api/v1/cryptoprice/currency/FTMUSD (can any symbols)
 
-http://45.63.127.197:8081/api/v1/currency/all
+http://45.63.127.197:8081/api/v1/cryptoprice/currency/all
