@@ -2,7 +2,6 @@ package routers
 
 import (
 	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
 	"github.com/labstack/gommon/log"
 	"github.com/vipindasvg/cryptoserver/controllers"
 	"os"
@@ -21,8 +20,7 @@ func InitRoutes() *echo.Echo {
 		l.SetHeader("${time_rfc3339} ${level}")
 	}
 	// liveness probe for k8s
-	e.Any("/health", controllers.Health)
-
-	e.GET(versionpref+"/currency/:symbol", controllers.GetCurrencies)
+	e.GET(versionpref+"/currency/:symbol", controllers.GetCurrency)
+	e.GET(versionpref+"/currency/all", controllers.GetCurrencies)
 	return e
 }	

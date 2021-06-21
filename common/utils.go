@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/sirupsen/logrus"
-	nested "github.com/aws/aws-sdk-go/aws/session"
+	nested "github.com/antonfisher/nested-logrus-formatter"
 )
 
 var (
